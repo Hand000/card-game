@@ -1,0 +1,84 @@
+#cardContainer {
+    position: relative;
+    display: flex;
+
+    min-height: 100vh;
+    
+    align-items: center;
+}
+
+#dealt {
+    position: absolute;
+    margin-top: 100px;
+    left: 50px;
+    right: 0;
+}
+
+#deck {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.displayCard {
+    /* Exact card back image dimensions */
+    width: 188px;
+    height: 268px;
+
+    /* Default colour */
+    color: black;
+    background-color: white;
+    
+    border-radius: 10px;
+}
+
+.redIcon {
+    color: red;
+}
+
+.cardCount {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    margin: 5px;
+    width: 100px;
+
+    background-color: grey;
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+/* Responsive layout */
+@media only screen and (min-width: 800px) {
+    #cardContainer {
+        min-height: 0vh;
+        height: 500px;
+    }
+    
+    #cardContainer > div {
+        width: 188px;
+        height: 268px;
+        position: relative;
+    }
+
+    .cardCount {
+        width: 40px;
+    }
+
+    .cardCount > span {
+        display: none;
+    }
+
+    #deck {
+        margin: auto;
+        margin-right: 5px;
+    }
+    
+    #dealt {
+        margin: auto;
+        margin-left: 5px;
+        left: 0px;
+    }
+}
